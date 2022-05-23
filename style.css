@@ -41,3 +41,26 @@
 body {
     display: flex;
 }
+
+.form-section {
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(19, 14, 14);
+    color: white;
+    justify-content: center;
+}
+
+.top-container {
+    padding: 30px;
+}
+
+.middle-container {
+    flex-grow: 4;
+    background-color: rgb(26, 24, 24);
+    padding: 30px;
+}
+
+.bottom-container {
+    padding: 30px;
+}
