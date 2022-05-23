@@ -10,6 +10,7 @@
 }
 
 .image-sidebar {
+    background-color: rgb(19, 14, 14);
     background-image: url(images/welding.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -105,4 +106,9 @@ form {
 
 input:focus {
     box-shadow: 1px 1px white;
+}
+
+.form-row input:invalid:not(:focus):not(:placeholder-shown) {
+    background-color: rgb(48, 6, 6);
+    border: 1px solid rgb(145, 0, 0);
 }

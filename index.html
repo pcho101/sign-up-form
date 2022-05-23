@@ -35,19 +35,19 @@
         </div>
         <div class="middle-container">
             <h1>Let's do this</h1>
-            <form action="">
+            <form action="#" id="form-register">
                 <div class="form-left">
                     <div class="form-row">
-                        <label for="first-name">First Name</label>
-                        <input type="text" name="first-name" id="first-name">    
+                        <label for="first-name">First Name *</label>
+                        <input type="text" name="first-name" id="first-name" placeholder=" " required>    
                     </div>
                     <div class="form-row">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email">    
+                        <label for="email">Email *</label>
+                        <input type="email" name="email" id="email" placeholder=" " required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+(\.[a-zA-Z]{2,4})">    
                     </div>
                     <div class="form-row">
-                        <label for="password">Password</label>
-                        <input type="password" name="password" id="password">
+                        <label for="password">Password *</label>
+                        <input type="password" name="password" id="password" placeholder=" " required onblur="checkPass()">
                     </div>
                 </div>
                 <div class="form-right">
@@ -57,19 +57,37 @@
                     </div>
                     <div class="form-row">
                         <label for="phone-number">Phone Number</label>
-                    <input type="tel" name="phone-number" id="phone-number">
+                        <input type="tel" name="phone-number" id="phone-number" pattern="(\d{3}|\(\d{3}\))?(\s|-|\.)?(\d{3})(\s|-|\.)?(\d{4})(\s*(ext|x|ext.)\s*(\d{2,5}))?">
                     </div>
                     <div class="form-row">
-                        <label for="confirm-password">Confirm Password</label>
-                        <input type="password" name="confirm-password" id="confirm-password">
+                        <label for="confirm-password">Confirm Password *</label>
+                        <input type="password" name="confirm-password" id="confirm-password" placeholder=" " required onblur="checkPass()">
+                        <p id="password-error" style="visibility: hidden;">Password does not match</p>
                     </div>
                 </div>
             </form>
         </div>
         <div class="bottom-container">
-            <button>Create Account</button>
+            <button type="submit" form="form-register">Create Account</button>
             <p>Already have an account? Log in</p>
         </div>
     </div>
+    <script>
+        let checkPass = function() {
+            const pwd = document.getElementById('password');
+            const pwdConf = document.getElementById('confirm-password');
+            const pwdError = document.getElementById('password-error');
+            if (pwd.value === pwdConf.value) {
+                pwdError.style.visibility = 'hidden';
+                pwdConf.style.backgroundColor = 'rgb(19, 14, 14)';
+                pwdConf.style.border = '1px solid grey';
+            }
+            else {
+                pwdError.style.visibility = 'visible';
+                pwdConf.style.backgroundColor = 'rgb(48, 6, 6)';
+                pwdConf.style.border = '1px solid rgb(145, 0, 0)';
+            }
+        }
+    </script>
 </body>
 </html>
