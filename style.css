@@ -9,6 +9,23 @@
     color: var(--textcolor);
 }
 
+em {
+    font-style: italic;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+.top-container h1 {
+    color: antiquewhite;
+}
+
+.middle-container h1 {
+    color: blanchedalmond;
+}
+
 .image-sidebar {
     background-color: rgb(19, 14, 14);
     background-image: url(images/welding.jpg);
