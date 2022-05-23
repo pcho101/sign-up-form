@@ -1,3 +1,14 @@
+:root {
+    --textcolor: rgb(204, 193, 193);
+    --header: 80px;
+    --footer: 80px;
+    --main: calc(100vh - calc(var(--header) + var(--footer)));
+}
+
+* {
+    color: var(--textcolor);
+}
+
 .image-sidebar {
     background-image: url(images/welding.jpg);
     background-position: center;
@@ -28,7 +39,7 @@
 
 .logo-text {
     font-size: 48px;
-    color: white;
+    color: var(--textcolor);
 }
 
 .photo-credit {
@@ -47,8 +58,9 @@ body {
     display: flex;
     flex-direction: column;
     background-color: rgb(19, 14, 14);
-    color: white;
+    color: var(--textcolor);
     justify-content: center;
+    height: 100vh;
 }
 
 .top-container {
@@ -56,11 +68,41 @@ body {
 }
 
 .middle-container {
-    flex-grow: 4;
     background-color: rgb(26, 24, 24);
     padding: 30px;
+    height: var(--main);
 }
 
 .bottom-container {
     padding: 30px;
+}
+
+.top-container>h1{
+    margin-bottom: 15px;
+}
+
+.middle-container h1 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form-row input {
+    background-color: rgb(19, 14, 14);
+    border: 1px solid grey;
+    border-radius: 3px;
+    padding: 4px;
+}
+
+input:focus {
+    box-shadow: 1px 1px white;
 }
