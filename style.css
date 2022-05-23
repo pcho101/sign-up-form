@@ -115,3 +115,40 @@ input:focus {
     background-color: rgb(48, 6, 6);
     border: 1px solid rgb(145, 0, 0);
 }
+
+@media only screen and (max-width: 700px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    .image-sidebar {
+        height: 120px;
+        width: 100vw;
+    }
+    .logo-container {
+        position: static;
+        margin-top: 1.5rem;
+    }
+    .photo-credit {
+        position: relative;
+        top: 10px;
+    }
+    .middle-container {
+        height: auto;
+    }
+    .form-section {
+        display: block;
+        height: auto;
+        width: 100vw;
+        text-align: center;
+    }
+    form {
+        justify-content: center;
+        max-width: 200px;
+        margin: auto;
+    }
+    .form-row {
+        margin-right: 0;
+        margin-bottom: 25px;
+    }
+}
